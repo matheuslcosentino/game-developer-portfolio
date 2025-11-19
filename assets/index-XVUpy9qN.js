@@ -15067,6 +15067,15 @@ function pa({
   status: E = 'Concluído',
 }) {
   const [_, x] = P.useState(!1);
+  const handlePlayClick = () => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+      const videoId = m.split('/embed/')[1];
+      window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
+    } else {
+      x(!0);
+    }
+  };
   return v.jsxs(v.Fragment, {
     children: [
       v.jsxs(ep, {
@@ -15177,7 +15186,7 @@ function pa({
                       size: 'sm',
                       className:
                         'text-foreground border-border hover:bg-card/50 hover:border-primary/30',
-                      onClick: () => x(!0),
+                      onClick: handlePlayClick,
                       children: [
                         v.jsx(g0, {
                           'data-loc': 'client\\src\\components\\ProjectCard.tsx:81',
@@ -15198,7 +15207,7 @@ function pa({
           className: 'fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm',
           onClick: () => x(!1),
           children: v.jsxs('div', {
-            className: 'relative w-full max-w-4xl aspect-video rounded-lg overflow-hidden',
+            className: 'relative w-full max-w-2xl mx-4 aspect-video rounded-lg overflow-hidden',
             onClick: (h) => h.stopPropagation(),
             children: [
               v.jsx('button', {

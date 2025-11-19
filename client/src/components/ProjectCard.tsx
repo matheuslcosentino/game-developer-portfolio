@@ -27,6 +27,16 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const [isTrailerOpen, setIsTrailerOpen] = useState(false);
 
+  const handlePlayClick = () => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile && trailerUrl) {
+      const videoId = trailerUrl.split('/embed/')[1];
+      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+    } else {
+      setIsTrailerOpen(true);
+    }
+  };
+
   return (
     <>
       <Card className="h-full bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border-border/50 overflow-hidden group hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500">
@@ -85,7 +95,7 @@ export default function ProjectCard({
                 variant="outline" 
                 size="sm" 
                 className="text-foreground border-border hover:bg-card/50 hover:border-primary/30"
-                onClick={() => setIsTrailerOpen(true)}
+                onClick={handlePlayClick}
               >
                 <Play className="w-4 h-4 mr-2" />
                 Play
@@ -95,13 +105,11 @@ export default function ProjectCard({
         </div>
       </Card>
 
-      {trailerUrl && (
-        <TrailerModal 
-          isOpen={isTrailerOpen} 
-          trailerUrl={trailerUrl} 
-          onClose={() => setIsTrailerOpen(false)}
-        />
-      )}
+      <TrailerModal 
+        isOpen={isTrailerOpen} 
+        trailerUrl={trailerUrl} 
+        onClose={() => setIsTrailerOpen(false)}
+      />
     </>
   );
 }
