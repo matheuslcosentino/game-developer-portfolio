@@ -13,7 +13,7 @@ const plugins = [
 
 export default defineConfig({
   plugins,
-  base: '/game-developer-portfolio/',
+  base: '/',
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),

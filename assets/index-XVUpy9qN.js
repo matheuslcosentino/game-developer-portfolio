@@ -15269,7 +15269,7 @@ function G0() {
     description:
     "Jogo de horror psicológico desenvolvido para TCC (Trabalho de Conclusão de Curso), explorando mecânicas de sanidade mental e atmosfera perturbadora.",
     role: "Lead Programmer",
-    image: "/game-developer-portfolio/project1.png",
+    image: "/project1.png",
     tags: ["Unity", "C#", "Game Jam", "Psychological Horror"],
     link: "https://unholysaintstudios.itch.io/delirium",
     trailerUrl: "https://www.youtube.com/watch?v=OXlCnt6Xueg",
@@ -15280,7 +15280,7 @@ function G0() {
     description:
       "Jogo de horror independente em desenvolvimento pela UF Team. Focado em resolução de enigmas e mecânicas de sobrevivência.",
     role: "Gameplay Programmer",
-    image: "/game-developer-portfolio/project2.png",
+    image: "/project2.png",
     tags: ["Unity", "C#", "Horror", "Puzzle"],
     link: "https://uf-team.itch.io/horrorstoryfolks",
     trailerUrl: "https://www.youtube.com/watch?v=DKj8WZ_q7nY",
@@ -15291,7 +15291,7 @@ function G0() {
     description:
       "Projeto desenvolvido em Game Jam, explorando mecânicas de memória e atmosfera sombria com narrativa não-linear.",
     role: "Gameplay Programmer",
-    image: "/game-developer-portfolio/project3.png",
+    image: "/project3.png",
     tags: ["Unity", "C#", "Game Jam", "Narrative Design"],
     link: "https://uf-team.itch.io/sombra-das-memorias",
     trailerUrl: "https://www.youtube.com/watch?v=6jRYfJA9XGQ",
@@ -15302,7 +15302,7 @@ function G0() {
     description:
     "Experiência VR desenvolvida na matéria de Realidade Virtual, visando imersão e exploração em um ambiente virtual.",
     role: "Gameplay Programmer",
-    image: "/game-developer-portfolio/project4.png",
+    image: "/project4.png",
     tags: ["Unity", "C#", "VR"],
     link: "https://uf-team.itch.io/visitors",
     trailerUrl: "",
@@ -15592,7 +15592,7 @@ function G0() {
                     }),
                     v.jsx('img', {
                       'data-loc': 'client\\src\\pages\\Home.tsx:209',
-                      src: '/game-developer-portfolio/profile.jpg',
+                      src: '/profile.jpg',
                       alt: 'Foto de Perfil',
                       className:
                         'relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-background shadow-xl',
@@ -16153,7 +16153,7 @@ function G0() {
     ],
   });
 }
-const Y0 = '/game-developer-portfolio';
+const Y0 = '/';
 function Q0() {
   return v.jsx(up, {
     'data-loc': 'client\\src\\App.tsx:14',

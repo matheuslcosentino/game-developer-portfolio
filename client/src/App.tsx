@@ -7,7 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
 // GitHub Pages base path configuration
-const base = "/game-developer-portfolio";
+const base = "/";
 
 function AppRouter() {
   return (
