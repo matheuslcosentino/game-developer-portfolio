@@ -27,12 +27,33 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const [isTrailerOpen, setIsTrailerOpen] = useState(false);
 
+  const extractVideoId = (url: string): string | null => {
+    if (!url) return null;
+
+    // Formato: https://www.youtube.com/embed/VIDEO_ID
+    let match = url.match(/(?:embed\/)([^/?]+)/);
+    if (match) return match[1];
+
+    // Formato: https://youtu.be/VIDEO_ID
+    match = url.match(/youtu\.be\/([^/?]+)/);
+    if (match) return match[1];
+
+    // Formato: https://www.youtube.com/watch?v=VIDEO_ID
+    match = url.match(/v=([^&]+)/);
+    if (match) return match[1];
+
+    return null;
+  };
+
   const handlePlayClick = () => {
+    if (!trailerUrl) return;
+
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if (isMobile && trailerUrl) {
-      const videoId = trailerUrl.split('/embed/')[1];
+    const videoId = extractVideoId(trailerUrl);
+
+    if (isMobile && videoId) {
       window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-    } else {
+    } else if (videoId) {
       setIsTrailerOpen(true);
     }
   };
@@ -107,7 +128,7 @@ export default function ProjectCard({
 
       <TrailerModal 
         isOpen={isTrailerOpen} 
-        trailerUrl={trailerUrl} 
+        trailerUrl={trailerUrl ? `https://www.youtube.com/embed/${extractVideoId(trailerUrl)}` : ""} 
         onClose={() => setIsTrailerOpen(false)}
       />
     </>

@@ -15067,12 +15067,23 @@ function pa({
   status: E = 'Concluído',
 }) {
   const [_, x] = P.useState(!1);
+  const extractVideoId = (url) => {
+    if (!url) return null;
+    let match = url.match(/(?:embed\/)([^/?]+)/);
+    if (match) return match[1];
+    match = url.match(/youtu\.be\/([^/?]+)/);
+    if (match) return match[1];
+    match = url.match(/v=([^&]+)/);
+    if (match) return match[1];
+    return null;
+  };
   const handlePlayClick = () => {
+    if (!m) return;
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if (isMobile) {
-      const videoId = m.split('/embed/')[1];
+    const videoId = extractVideoId(m);
+    if (isMobile && videoId) {
       window.open('https://www.youtube.com/watch?v=' + videoId, '_blank');
-    } else {
+    } else if (videoId) {
       x(!0);
     }
   };
@@ -15220,7 +15231,7 @@ function pa({
               v.jsx('iframe', {
                 width: '100%',
                 height: '100%',
-                src: m + '?autoplay=1',
+                src: m ? 'https://www.youtube.com/embed/' + extractVideoId(m) + '?autoplay=1' : '',
                 title: 'Game Trailer',
                 frameBorder: '0',
                 allow:
