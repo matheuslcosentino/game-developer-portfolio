@@ -32,7 +32,7 @@ export default function TrailerModal({ isOpen, trailerUrl, onClose }: TrailerMod
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-3xl mx-4 aspect-video rounded-lg overflow-hidden"
+        className="relative w-full max-w-2xl mx-4 aspect-video rounded-lg overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}

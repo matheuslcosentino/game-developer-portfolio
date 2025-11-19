@@ -15218,7 +15218,7 @@ function pa({
           className: 'fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm',
           onClick: () => x(!1),
           children: v.jsxs('div', {
-            className: 'relative w-full max-w-3xl mx-4 aspect-video rounded-lg overflow-hidden',
+            className: 'relative w-full max-w-2xl mx-4 aspect-video rounded-lg overflow-hidden',
             onClick: (h) => h.stopPropagation(),
             children: [
               v.jsx('button', {
