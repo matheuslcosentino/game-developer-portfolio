@@ -15256,7 +15256,7 @@ function G0() {
 {
     title: "Delirium",
     description:
-    "Jogo de horror psicológico desenvolvido em TCC (Trabalho de Conclusão de Curso), explorando mecânicas de sanidade mental e atmosfera perturbadora.",
+    "Jogo de horror psicológico desenvolvido para TCC (Trabalho de Conclusão de Curso), explorando mecânicas de sanidade mental e atmosfera perturbadora.",
     role: "Lead Programmer",
     image: "/game-developer-portfolio/project1.png",
     tags: ["Unity", "C#", "Game Jam", "Psychological Horror"],
@@ -15289,7 +15289,7 @@ function G0() {
     {
     title: "Visitors",
     description:
-    "Jogo de horror independente focado em resolução de enigmas e mecânicas de sobrevivência em ambiente claustrofóbico.",
+    "Experiência VR desenvolvida na matéria de Realidade Virtual, visando imersão e exploração em um ambiente virtual.",
     role: "Gameplay Programmer",
     image: "/game-developer-portfolio/project4.png",
     tags: ["Unity", "C#", "VR"],
