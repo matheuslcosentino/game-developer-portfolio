@@ -56,7 +56,7 @@ export default function Home() {
       description:
         "Jogo de horror independente focado em resolução de enigmas e mecânicas de sobrevivência em ambiente claustrofóbico.",
       role: "Gameplay Programmer",
-      image: "/game-developer-portfolio/project3.jpg",
+      image: "/game-developer-portfolio/project3.png",
       tags: ["Unity", "C#", "VR"],
       link: "https://uf-team.itch.io/visitors",
       trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
@@ -67,7 +67,7 @@ export default function Home() {
       description:
         "Jogo de horror independente em desenvolvimento pela UF Team. Focado em resolução de enigmas e mecânicas de sobrevivência.",
       role: "Gameplay Programmer",
-      image: "/game-developer-portfolio/project4.jpg",
+      image: "/game-developer-portfolio/project4.png",
       tags: ["Unity", "C#", "Horror", "Puzzle"],
       link: "https://uf-team.itch.io/horrorstoryfolks",
       trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
