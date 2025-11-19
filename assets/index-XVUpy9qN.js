@@ -15665,7 +15665,7 @@ function G0() {
                                   className:
                                     'text-muted-foreground leading-relaxed',
                                   children:
-                                    'Desenvolvedor de jogos especializado em C# focado no desenvolvimento e implementação de novas mecânicas. Apaixonado por jogos de terror e com grande amor por contar histórias.',
+                                    'Desenvolvedor de Jogos em Unity C#, especializado em criação e implementação de mecânicas de gameplay, com foco em jogos de Terror Psicológico, experiências interativas impactantes e apaixonado em contar boas histórias.',
                                 }),
                               ],
                             }),
@@ -16029,7 +16029,7 @@ function G0() {
               }),
               v.jsxs('div', {
                 'data-loc': 'client\\src\\pages\\Home.tsx:389',
-                className: 'grid md:grid-cols-2 lg:grid-cols-5 gap-6',
+                className: 'flex flex-wrap justify-center gap-3',
                 children: [
                   v.jsxs('a', {
                     'data-loc': 'client\\src\\pages\\Home.tsx:390',
@@ -16037,26 +16037,16 @@ function G0() {
                     target: '_blank',
                     rel: 'noopener noreferrer',
                     className:
-                      'group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all',
+                      'inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all',
                     children: [
-                      v.jsx('div', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:394',
-                        className:
-                          'w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform',
-                        children: v.jsx(f0, {
-                          'data-loc': 'client\\src\\pages\\Home.tsx:395',
-                          className: 'w-6 h-6 text-primary',
-                        }),
+                      v.jsx(f0, {
+                        'data-loc': 'client\\src\\pages\\Home.tsx:395',
+                        className: 'w-5 h-5 text-primary',
                       }),
-                      v.jsx('h3', {
+                      v.jsx('span', {
                         'data-loc': 'client\\src\\pages\\Home.tsx:397',
-                        className: 'text-lg font-bold mb-2',
+                        className: 'text-sm font-semibold',
                         children: 'LinkedIn',
-                      }),
-                      v.jsx('p', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:398',
-                        className: 'text-sm text-muted-foreground',
-                        children: 'Conecte-se comigo',
                       }),
                     ],
                   }),
@@ -16066,26 +16056,16 @@ function G0() {
                     target: '_blank',
                     rel: 'noopener noreferrer',
                     className:
-                      'group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all',
+                      'inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all',
                     children: [
-                      v.jsx('div', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:407',
-                        className:
-                          'w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform',
-                        children: v.jsx(Wd, {
-                          'data-loc': 'client\\src\\pages\\Home.tsx:408',
-                          className: 'w-6 h-6 text-primary',
-                        }),
+                      v.jsx(Wd, {
+                        'data-loc': 'client\\src\\pages\\Home.tsx:408',
+                        className: 'w-5 h-5 text-primary',
                       }),
-                      v.jsx('h3', {
+                      v.jsx('span', {
                         'data-loc': 'client\\src\\pages\\Home.tsx:410',
-                        className: 'text-lg font-bold mb-2',
+                        className: 'text-sm font-semibold',
                         children: 'GitHub',
-                      }),
-                      v.jsx('p', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:411',
-                        className: 'text-sm text-muted-foreground',
-                        children: 'Veja meus projetos',
                       }),
                     ],
                   }),
@@ -16093,26 +16073,16 @@ function G0() {
                     'data-loc': 'client\\src\\pages\\Home.tsx:414',
                     href: 'mailto:matheuslopescosentino@hotmail.com',
                     className:
-                      'group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all',
+                      'inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all',
                     children: [
-                      v.jsx('div', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:420',
-                        className:
-                          'w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform',
-                        children: v.jsx(p0, {
-                          'data-loc': 'client\\src\\pages\\Home.tsx:421',
-                          className: 'w-6 h-6 text-primary',
-                        }),
+                      v.jsx(p0, {
+                        'data-loc': 'client\\src\\pages\\Home.tsx:421',
+                        className: 'w-5 h-5 text-primary',
                       }),
-                      v.jsx('h3', {
+                      v.jsx('span', {
                         'data-loc': 'client\\src\\pages\\Home.tsx:423',
-                        className: 'text-lg font-bold mb-2',
+                        className: 'text-sm font-semibold',
                         children: 'Email',
-                      }),
-                      v.jsx('p', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:424',
-                        className: 'text-sm text-muted-foreground',
-                        children: 'Envie uma mensagem',
                       }),
                     ],
                   }),
@@ -16122,26 +16092,16 @@ function G0() {
                     target: '_blank',
                     rel: 'noopener noreferrer',
                     className:
-                      'group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all',
+                      'inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all',
                     children: [
-                      v.jsx('div', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:433',
-                        className:
-                          'w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform',
-                        children: v.jsx(d0, {
-                          'data-loc': 'client\\src\\pages\\Home.tsx:434',
-                          className: 'w-6 h-6 text-primary',
-                        }),
+                      v.jsx(d0, {
+                        'data-loc': 'client\\src\\pages\\Home.tsx:434',
+                        className: 'w-5 h-5 text-primary',
                       }),
-                      v.jsx('h3', {
+                      v.jsx('span', {
                         'data-loc': 'client\\src\\pages\\Home.tsx:436',
-                        className: 'text-lg font-bold mb-2',
+                        className: 'text-sm font-semibold',
                         children: 'Instagram',
-                      }),
-                      v.jsx('p', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:437',
-                        className: 'text-sm text-muted-foreground',
-                        children: 'Siga meu trabalho',
                       }),
                     ],
                   }),
@@ -16151,26 +16111,16 @@ function G0() {
                     target: '_blank',
                     rel: 'noopener noreferrer',
                     className:
-                      'group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all',
+                      'inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all',
                     children: [
-                      v.jsx('div', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:446',
-                        className:
-                          'w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform',
-                        children: v.jsx(h0, {
-                          'data-loc': 'client\\src\\pages\\Home.tsx:447',
-                          className: 'w-6 h-6 text-primary',
-                        }),
+                      v.jsx(h0, {
+                        'data-loc': 'client\\src\\pages\\Home.tsx:447',
+                        className: 'w-5 h-5 text-primary',
                       }),
-                      v.jsx('h3', {
+                      v.jsx('span', {
                         'data-loc': 'client\\src\\pages\\Home.tsx:449',
-                        className: 'text-lg font-bold mb-2',
+                        className: 'text-sm font-semibold',
                         children: 'WhatsApp',
-                      }),
-                      v.jsx('p', {
-                        'data-loc': 'client\\src\\pages\\Home.tsx:450',
-                        className: 'text-sm text-muted-foreground',
-                        children: 'Converse diretamente',
                       }),
                     ],
                   }),

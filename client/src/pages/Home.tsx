@@ -386,68 +386,53 @@ export default function Home() {
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-6" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="flex flex-wrap justify-center gap-3">
             <a
               href="https://linkedin.com/in/matheus-cosentino/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all"
             >
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Linkedin className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">LinkedIn</h3>
-              <p className="text-sm text-muted-foreground">Conecte-se comigo</p>
+              <Linkedin className="w-5 h-5 text-primary" />
+              <span className="text-sm font-semibold">LinkedIn</span>
             </a>
 
             <a
               href="https://github.com/matheuslcosentino"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all"
             >
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Github className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">GitHub</h3>
-              <p className="text-sm text-muted-foreground">Veja meus projetos</p>
+              <Github className="w-5 h-5 text-primary" />
+              <span className="text-sm font-semibold">GitHub</span>
             </a>
 
             <a
               href="mailto:matheuslopescosentino@hotmail.com"
-              className="group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all"
             >
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Email</h3>
-              <p className="text-sm text-muted-foreground">Envie uma mensagem</p>
+              <Mail className="w-5 h-5 text-primary" />
+              <span className="text-sm font-semibold">Email</span>
             </a>
 
             <a
               href="https://instagram.com/matheus.cosentino"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all"
             >
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <Instagram className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Instagram</h3>
-              <p className="text-sm text-muted-foreground">Siga meu trabalho</p>
+              <Instagram className="w-5 h-5 text-primary" />
+              <span className="text-sm font-semibold">Instagram</span>
             </a>
 
             <a
               href="https://wa.me/5547992230328"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-6 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all"
             >
-              <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                <MessageCircle className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">WhatsApp</h3>
-              <p className="text-sm text-muted-foreground">Converse diretamente</p>
+              <MessageCircle className="w-5 h-5 text-primary" />
+              <span className="text-sm font-semibold">WhatsApp</span>
             </a>
           </div>
         </div>
