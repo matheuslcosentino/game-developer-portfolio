@@ -15261,7 +15261,7 @@ function G0() {
     image: "/game-developer-portfolio/project1.png",
     tags: ["Unity", "C#", "Game Jam", "Psychological Horror"],
     link: "https://unholysaintstudios.itch.io/delirium",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    trailerUrl: "https://www.youtube.com/watch?v=OXlCnt6Xueg",
     status: "Concluído",
     },
     {
@@ -15272,7 +15272,7 @@ function G0() {
     image: "/game-developer-portfolio/project2.png",
     tags: ["Unity", "C#", "Horror", "Puzzle"],
     link: "https://uf-team.itch.io/horrorstoryfolks",
-    trailerUrl: "https://youtu.be/DKj8WZ_q7nY",
+    trailerUrl: "https://www.youtube.com/watch?v=DKj8WZ_q7nY",
     status: "Em Desenvolvimento",
     },
     {
