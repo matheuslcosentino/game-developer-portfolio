@@ -15474,12 +15474,12 @@ function G0() {
                           v.jsx('h3', {
                             'data-loc': 'client\\src\\pages\\Home.tsx:180',
                             className: 'text-2xl font-bold',
-                            children: '4 Projetos',
+                            children: '4 Projetos Publicados',
                           }),
                           v.jsx('p', {
                             'data-loc': 'client\\src\\pages\\Home.tsx:181',
                             className: 'text-muted-foreground',
-                            children: 'Game Jams vencidas e jogos publicados',
+                            children: '2 Game Jams Vencidas e Jogos Publicados',
                           }),
                         ],
                       }),
