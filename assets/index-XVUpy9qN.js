@@ -15063,128 +15063,165 @@ function pa({
   image: c,
   tags: u,
   link: f,
-  status: p = 'Concluído',
+  trailerUrl: m = '',
+  status: E = 'Concluído',
 }) {
-  return v.jsxs(ep, {
-    'data-loc': 'client\\src\\components\\ProjectCard.tsx:25',
-    className:
-      'h-full bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border-border/50 overflow-hidden group hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500',
+  const [_, x] = P.useState(!1);
+  return v.jsxs(v.Fragment, {
     children: [
-      v.jsxs('div', {
-        'data-loc': 'client\\src\\components\\ProjectCard.tsx:26',
-        className: 'relative h-64 overflow-hidden',
+      v.jsxs(ep, {
+        'data-loc': 'client\\src\\components\\ProjectCard.tsx:25',
+        className:
+          'h-full bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border-border/50 overflow-hidden group hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-500',
         children: [
-          v.jsx('img', {
-            'data-loc': 'client\\src\\components\\ProjectCard.tsx:27',
-            src: c,
-            alt: o,
-            className:
-              'w-full h-full object-cover group-hover:scale-110 transition-transform duration-700',
-          }),
-          v.jsx('div', {
-            'data-loc': 'client\\src\\components\\ProjectCard.tsx:32',
-            className:
-              'absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity',
-          }),
-          p &&
-            v.jsx('div', {
-              'data-loc': 'client\\src\\components\\ProjectCard.tsx:34',
-              className:
-                'absolute top-4 right-4 bg-background/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold text-foreground border border-primary/30 shadow-lg',
-              children: p,
-            }),
-          v.jsx('div', {
-            'data-loc': 'client\\src\\components\\ProjectCard.tsx:38',
-            className: 'absolute bottom-4 left-4 right-4',
-            children: v.jsx('h3', {
-              'data-loc': 'client\\src\\components\\ProjectCard.tsx:39',
-              className: 'text-2xl font-bold text-white drop-shadow-lg',
-              children: o,
-            }),
-          }),
-        ],
-      }),
-      v.jsxs('div', {
-        'data-loc': 'client\\src\\components\\ProjectCard.tsx:43',
-        className: 'p-6 space-y-4',
-        children: [
-          v.jsx('p', {
-            'data-loc': 'client\\src\\components\\ProjectCard.tsx:44',
-            className:
-              'text-muted-foreground text-sm leading-relaxed line-clamp-3',
-            children: i,
-          }),
           v.jsxs('div', {
-            'data-loc': 'client\\src\\components\\ProjectCard.tsx:48',
-            className: 'flex items-center gap-2 text-sm',
+            'data-loc': 'client\\src\\components\\ProjectCard.tsx:26',
+            className: 'relative h-64 overflow-hidden',
             children: [
-              v.jsx('span', {
-                'data-loc': 'client\\src\\components\\ProjectCard.tsx:49',
-                className: 'font-semibold text-primary',
-                children: 'Função:',
+              v.jsx('img', {
+                'data-loc': 'client\\src\\components\\ProjectCard.tsx:27',
+                src: c,
+                alt: o,
+                className:
+                  'w-full h-full object-cover group-hover:scale-110 transition-transform duration-700',
               }),
-              v.jsx('span', {
-                'data-loc': 'client\\src\\components\\ProjectCard.tsx:50',
-                className: 'text-foreground',
-                children: l,
+              v.jsx('div', {
+                'data-loc': 'client\\src\\components\\ProjectCard.tsx:32',
+                className:
+                  'absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity',
+              }),
+              E &&
+                v.jsx('div', {
+                  'data-loc': 'client\\src\\components\\ProjectCard.tsx:34',
+                  className:
+                    'absolute top-4 right-4 bg-background/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-semibold text-foreground border border-primary/30 shadow-lg',
+                  children: E,
+                }),
+              v.jsx('div', {
+                'data-loc': 'client\\src\\components\\ProjectCard.tsx:38',
+                className: 'absolute bottom-4 left-4 right-4',
+                children: v.jsx('h3', {
+                  'data-loc': 'client\\src\\components\\ProjectCard.tsx:39',
+                  className: 'text-2xl font-bold text-white drop-shadow-lg',
+                  children: o,
+                }),
               }),
             ],
           }),
-          v.jsx('div', {
-            'data-loc': 'client\\src\\components\\ProjectCard.tsx:53',
-            className: 'flex flex-wrap gap-2',
-            children: u.map((x, h) =>
-              v.jsx(
-                'span',
-                {
-                  'data-loc': 'client\\src\\components\\ProjectCard.tsx:55',
-                  className:
-                    'px-3 py-1 text-xs font-medium bg-primary/10 border border-primary/30 rounded-full text-primary hover:bg-primary/20 transition-colors',
-                  children: x,
-                },
-                h,
-              ),
-            ),
-          }),
           v.jsxs('div', {
-            'data-loc': 'client\\src\\components\\ProjectCard.tsx:64',
-            className: 'flex gap-3 pt-2',
+            'data-loc': 'client\\src\\components\\ProjectCard.tsx:43',
+            className: 'p-6 space-y-4',
             children: [
-              f &&
-                v.jsxs(ct, {
-                  'data-loc': 'client\\src\\components\\ProjectCard.tsx:66',
-                  variant: 'default',
-                  size: 'sm',
-                  className:
-                    'bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all',
-                  onClick: () => window.open(f, '_blank'),
-                  children: [
-                    v.jsx(c0, {
-                      'data-loc': 'client\\src\\components\\ProjectCard.tsx:72',
-                      className: 'w-4 h-4 mr-2',
-                    }),
-                    'Acessar',
-                  ],
-                }),
-              v.jsxs(ct, {
-                'data-loc': 'client\\src\\components\\ProjectCard.tsx:76',
-                variant: 'outline',
-                size: 'sm',
+              v.jsx('p', {
+                'data-loc': 'client\\src\\components\\ProjectCard.tsx:44',
                 className:
-                  'text-foreground border-border hover:bg-card/50 hover:border-primary/30',
-                onClick: () => (f ? window.open(f, '_blank') : null),
+                  'text-muted-foreground text-sm leading-relaxed line-clamp-3',
+                children: i,
+              }),
+              v.jsxs('div', {
+                'data-loc': 'client\\src\\components\\ProjectCard.tsx:48',
+                className: 'flex items-center gap-2 text-sm',
                 children: [
-                  v.jsx(g0, {
-                    'data-loc': 'client\\src\\components\\ProjectCard.tsx:81',
-                    className: 'w-4 h-4 mr-2',
+                  v.jsx('span', {
+                    'data-loc': 'client\\src\\components\\ProjectCard.tsx:49',
+                    className: 'font-semibold text-primary',
+                    children: 'Função:',
                   }),
-                  'Play',
+                  v.jsx('span', {
+                    'data-loc': 'client\\src\\components\\ProjectCard.tsx:50',
+                    className: 'text-foreground',
+                    children: l,
+                  }),
+                ],
+              }),
+              v.jsx('div', {
+                'data-loc': 'client\\src\\components\\ProjectCard.tsx:53',
+                className: 'flex flex-wrap gap-2',
+                children: u.map((T, h) =>
+                  v.jsx(
+                    'span',
+                    {
+                      'data-loc': 'client\\src\\components\\ProjectCard.tsx:55',
+                      className:
+                        'px-3 py-1 text-xs font-medium bg-primary/10 border border-primary/30 rounded-full text-primary hover:bg-primary/20 transition-colors',
+                      children: T,
+                    },
+                    h,
+                  ),
+                ),
+              }),
+              v.jsxs('div', {
+                'data-loc': 'client\\src\\components\\ProjectCard.tsx:64',
+                className: 'flex gap-3 pt-2',
+                children: [
+                  f &&
+                    v.jsxs(ct, {
+                      'data-loc': 'client\\src\\components\\ProjectCard.tsx:66',
+                      variant: 'default',
+                      size: 'sm',
+                      className:
+                        'bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all',
+                      onClick: () => window.open(f, '_blank'),
+                      children: [
+                        v.jsx(c0, {
+                          'data-loc': 'client\\src\\components\\ProjectCard.tsx:72',
+                          className: 'w-4 h-4 mr-2',
+                        }),
+                        'Acessar',
+                      ],
+                    }),
+                  m &&
+                    v.jsxs(ct, {
+                      'data-loc': 'client\\src\\components\\ProjectCard.tsx:76',
+                      variant: 'outline',
+                      size: 'sm',
+                      className:
+                        'text-foreground border-border hover:bg-card/50 hover:border-primary/30',
+                      onClick: () => x(!0),
+                      children: [
+                        v.jsx(g0, {
+                          'data-loc': 'client\\src\\components\\ProjectCard.tsx:81',
+                          className: 'w-4 h-4 mr-2',
+                        }),
+                        'Play',
+                      ],
+                    }),
                 ],
               }),
             ],
           }),
         ],
       }),
+      _ &&
+        m &&
+        v.jsx('div', {
+          className: 'fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm',
+          onClick: () => x(!1),
+          children: v.jsxs('div', {
+            className: 'relative w-full max-w-4xl aspect-video rounded-lg overflow-hidden',
+            onClick: (h) => h.stopPropagation(),
+            children: [
+              v.jsx('button', {
+                onClick: () => x(!1),
+                className:
+                  'absolute top-4 right-4 z-10 bg-black/60 hover:bg-black/80 p-2 rounded-full transition-colors text-white text-xl font-bold',
+                'aria-label': 'Fechar',
+                children: '✕',
+              }),
+              v.jsx('iframe', {
+                width: '100%',
+                height: '100%',
+                src: m + '?autoplay=1',
+                title: 'Game Trailer',
+                frameBorder: '0',
+                allow:
+                  'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',
+                allowFullScreen: !0,
+                className: 'w-full h-full',
+              }),
+            ],
+          }),
+        }),
     ],
   });
 }
@@ -15215,6 +15252,7 @@ function G0() {
     image: "/game-developer-portfolio/project1.png",
     tags: ["Unity", "C#", "Game Jam", "Psychological Horror"],
     link: "https://unholysaintstudios.itch.io/delirium",
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     status: "Concluído",
     },
     {
@@ -15225,6 +15263,7 @@ function G0() {
     image: "/game-developer-portfolio/project2.png",
     tags: ["Unity", "C#", "Game Jam", "Narrative Design"],
     link: "https://uf-team.itch.io/sombra-das-memorias",
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     status: "Concluído",
     },
     {
@@ -15235,6 +15274,7 @@ function G0() {
     image: "/game-developer-portfolio/project3.jpg",
     tags: ["Unity", "C#", "VR"],
     link: "https://uf-team.itch.io/visitors",
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     status: "Em Desenvolvimento",
     },
     {
@@ -15245,6 +15285,7 @@ function G0() {
     image: "/game-developer-portfolio/project4.jpg",
     tags: ["Unity", "C#", "Horror", "Puzzle"],
     link: "https://uf-team.itch.io/horrorstoryfolks",
+    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     status: "Em Desenvolvimento",
     },
     ],
