@@ -506,46 +506,72 @@ export default function Home() {
           {/* Projects Grid - Single Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {PORTFOLIO.PROJECTS.map((project, idx) => (
-              <a
+              <div
                 key={idx}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative aspect-square overflow-hidden rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300"
+                className="group relative aspect-square overflow-hidden rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 bg-card flex flex-col"
               >
-                {/* Background Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
+                {/* Image Container - 65% */}
+                <div className="relative h-[65%] overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {project.status && (
+                    <div className="absolute top-3 right-3">
+                      <span className="text-xs font-bold text-foreground bg-card/90 backdrop-blur-sm px-3 py-1 rounded-full border border-primary/50">
+                        {project.status}
+                      </span>
+                    </div>
+                  )}
+                </div>
 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* Content Container - 35% */}
+                <div className="flex-1 flex flex-col justify-between p-4 bg-card/50 backdrop-blur-sm">
+                  {/* Title and Description */}
+                  <div className="mb-3">
+                    <h3 className="text-lg font-bold text-foreground mb-1 line-clamp-1">{project.title}</h3>
+                    <p className="text-xs text-muted-foreground line-clamp-2 mb-2">{project.description}</p>
+                    <p className="text-xs text-primary font-semibold">Função: {project.role}</p>
+                  </div>
 
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
-                  <p className="text-sm text-gray-200 line-clamp-2 mb-3">{project.description}</p>
-                  
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {project.tags.slice(0, 2).map((tag, tagIdx) => (
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {project.tags.slice(0, 4).map((tag, tagIdx) => (
                       <span
                         key={tagIdx}
-                        className="text-xs px-2 py-1 bg-primary/30 text-primary rounded border border-primary/50"
+                        className="text-xs px-2 py-1 bg-background border border-border rounded"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-1 text-primary group-hover:text-primary/80 transition-colors">
-                    <span className="text-sm font-semibold">Ver Projeto</span>
-                    <ExternalLink className="w-4 h-4" />
+                  {/* Buttons */}
+                  <div className="flex gap-2">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/50 hover:border-primary/80 rounded-lg text-xs font-semibold transition-all"
+                    >
+                      <ExternalLink className="w-3.5 h-3.5" />
+                      Acessar
+                    </a>
+                    {project.trailerUrl && (
+                      <a
+                        href={project.trailerUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary/60 rounded-lg text-xs font-semibold transition-all"
+                      >
+                        <Play className="w-3.5 h-3.5" />
+                        Trailer
+                      </a>
+                    )}
                   </div>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>
