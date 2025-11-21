@@ -401,7 +401,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Left column - Habilidades */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-primary/10 to-blue-500/10 backdrop-blur-xl border border-primary/30 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-xl border border-border/50 rounded-2xl p-8 hover:border-primary/30 transition-all">
                 <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-2">
                   <Layers className="w-6 h-6" />
                   Habilidades
@@ -597,7 +597,7 @@ export default function Home() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-card/40 backdrop-blur-sm hover:border-primary/50 hover:bg-card/60 transition-all"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm hover:border-primary/50 transition-all"
                 >
                   {Icon && <Icon className="w-5 h-5 text-primary" />}
                   <span className="text-sm font-semibold">{link.name}</span>
@@ -624,7 +624,7 @@ export default function Home() {
           animation: "float-up 3s ease-in-out infinite",
         }}
       >
-        <div className="bg-gradient-to-br from-card to-card/80 rounded-2xl p-6 w-80 shadow-2xl border-2 border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-primary/30">
+        <div className="bg-gradient-to-br from-card/80 to-card/40 rounded-2xl p-6 w-80 shadow-2xl border-2 border-primary/30 hover:border-primary/60 transition-all duration-300 hover:shadow-primary/30">
           <div className="flex gap-4 mb-4">
             {/* Card Image */}
             <div className="flex-shrink-0">
