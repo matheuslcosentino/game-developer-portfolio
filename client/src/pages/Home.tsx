@@ -55,26 +55,17 @@ export default function Home() {
       >
         {/* Animated Gaming Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Animated Elements - Grid-based to prevent overlap */}
-          {Array.from({ length: 80 }).map((_, idx) => {
+          {/* Animated Elements - Random distribution */}
+          {Array.from({ length: 160 }).map((_, idx) => {
             const emojis = ["🎮", "🕹️", "🎯", "⚡", "🌟", "◆", "★", "◯", "✕", "□", "△", "⬜", "🎲", "🎪", "🔥", "💫", "✨", "🌠"];
             const emoji = emojis[idx % emojis.length];
             
-            // Usar grid para distribuir sem sobreposição
-            const cols = 10;
-            const rows = 8;
-            const col = idx % cols;
-            const row = Math.floor(idx / cols);
-            
-            // Calcular posição base com grid + offset aleatório
-            const cellWidth = 100 / cols;
-            const cellHeight = 100 / rows;
-            const top = (row * cellHeight) + Math.random() * (cellHeight - 8);
-            const left = (col * cellWidth) + Math.random() * (cellWidth - 8);
-            
-            const size = Math.random() * 30 + 18; // 18-48px
-            const delay = Math.random() * 4;
-            const duration = Math.random() * 2 + 5; // 5-7s
+            // Distribuição completamente aleatória
+            const top = Math.random() * 100;
+            const left = Math.random() * 100;
+            const size = Math.random() * 28 + 16; // 16-44px
+            const delay = Math.random() * 5;
+            const duration = Math.random() * 2.5 + 4.5; // 4.5-7s
             
             return (
               <div
@@ -84,11 +75,12 @@ export default function Home() {
                   top: `${top}%`,
                   left: `${left}%`,
                   fontSize: `${size}px`,
-                  opacity: Math.random() * 0.25 + 0.08,
+                  opacity: Math.random() * 0.2 + 0.05,
                   animation: `float ${duration}s ease-in-out infinite`,
                   animationDelay: `${delay}s`,
-                  color: "rgba(6, 182, 212, 0.5)",
+                  color: "rgba(6, 182, 212, 0.4)",
                   userSelect: "none",
+                  pointerEvents: "none",
                 }}
               >
                 {emoji}
