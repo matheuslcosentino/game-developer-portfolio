@@ -385,17 +385,17 @@ export default function Home() {
                 />
               </div>
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold mt-4 mb-6 text-foreground">
+            <h2 className="text-5xl md:text-6xl font-bold mt-4 mb-4 text-foreground">
               {PORTFOLIO.ABOUT_CONTENT.title}
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto" />
           </div>
 
           {/* Centered description text */}
-          <div className="text-center mb-12 max-w-3xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="text-center mb-8 max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed line-clamp-2">
               {PORTFOLIO.ABOUT_CONTENT.description}
             </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-6" />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8">
