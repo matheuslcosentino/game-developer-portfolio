@@ -318,17 +318,17 @@ export default function Home() {
       {/* Contact Section */}
       <section
         ref={contactRef}
-        className="min-h-screen flex items-center py-32 px-4 bg-background relative"
+        className="flex items-center py-16 px-4 bg-background relative"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none" />
 
         <div className="container max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase">Entre em contato</span>
-            <h2 className="text-5xl md:text-6xl font-bold mt-4 mb-6 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mt-3 mb-4 text-foreground">
               {PORTFOLIO.CONTACT_CONTENT.title}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               {PORTFOLIO.CONTACT_CONTENT.subtitle}
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-6" />

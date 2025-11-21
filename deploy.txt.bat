@@ -1,6 +1,6 @@
 git init
 git branch -m main
-git remote remove origin >nul 2>&1
+git remote remove origin
 git remote add origin https://github.com/matheuslcosentino/matheuslcosentino.github.io.git
 git add -A
 git commit -m "Deploy automatico"
