@@ -511,11 +511,11 @@ export default function Home() {
                 className="group relative aspect-square overflow-hidden rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 bg-card flex flex-col"
               >
                 {/* Image Container - 65% */}
-                <div className="relative h-[65%] overflow-hidden">
+                <div className="relative h-[65%] overflow-hidden bg-background/50 flex items-center justify-center">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                   {project.status && (
                     <div className="absolute top-3 right-3">
