@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Play } from "lucide-react";
 import TrailerModal from "@/components/TrailerModal";
+import { handlePlayClick, buildYouTubeEmbedUrl, openLink } from "@/functions";
 
 interface ProjectCardProps {
   title: string;
@@ -26,39 +27,6 @@ export default function ProjectCard({
   status = "Concluído",
 }: ProjectCardProps) {
   const [isTrailerOpen, setIsTrailerOpen] = useState(false);
-
-  const extractVideoId = (url: string): string | null => {
-    if (!url) return null;
-
-    // Formato: https://www.youtube.com/embed/VIDEO_ID
-    let match = url.match(/(?:embed\/)([^/?]+)/);
-    if (match) return match[1];
-
-    // Formato: https://youtu.be/VIDEO_ID
-    match = url.match(/youtu\.be\/([^/?]+)/);
-    if (match) return match[1];
-
-    // Formato: https://www.youtube.com/watch?v=VIDEO_ID
-    match = url.match(/v=([^&]+)/);
-    if (match) return match[1];
-
-    return null;
-  };
-
-  const handlePlayClick = () => {
-    if (!trailerUrl || trailerUrl.trim() === '') return;
-
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const videoId = extractVideoId(trailerUrl);
-
-    if (!videoId) return;
-
-    if (isMobile) {
-      window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-    } else {
-      setIsTrailerOpen(true);
-    }
-  };
 
   return (
     <>
@@ -107,7 +75,7 @@ export default function ProjectCard({
                 variant="default"
                 size="sm"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg hover:shadow-primary/20 transition-all"
-                onClick={() => window.open(link, "_blank")}
+                onClick={() => openLink(link)}
               >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Acessar
@@ -118,7 +86,7 @@ export default function ProjectCard({
                 variant="outline" 
                 size="sm" 
                 className="text-foreground border-border hover:bg-card/50 hover:border-primary/30"
-                onClick={handlePlayClick}
+                onClick={() => handlePlayClick(trailerUrl, () => setIsTrailerOpen(true))}
               >
                 <Play className="w-4 h-4 mr-2" />
                 Play
@@ -131,7 +99,7 @@ export default function ProjectCard({
       {trailerUrl && trailerUrl.trim() !== '' && (
         <TrailerModal 
           isOpen={isTrailerOpen} 
-          trailerUrl={`https://www.youtube.com/embed/${extractVideoId(trailerUrl)}`} 
+          trailerUrl={buildYouTubeEmbedUrl(trailerUrl)} 
           onClose={() => setIsTrailerOpen(false)}
         />
       )}
