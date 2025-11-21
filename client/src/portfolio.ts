@@ -76,8 +76,10 @@ export const PROJECTS = [
 export const SKILLS = [
   "Game Design",
   "Mechanic Programming",
-  "Unity 3D",
-  "Blender",
+  "Level Design",
+  "Unity 2D/3D",
+  "Blender 3D",
+  "Photoshop",
   "C#",
   "Python",
   ".NET",
