@@ -503,20 +503,50 @@ export default function Home() {
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-6" />
           </div>
 
-          {/* Bento Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
-            <div className="lg:col-span-2">
-              <ProjectCard {...PORTFOLIO.PROJECTS[0]} />
-            </div>
-            <div>
-              <ProjectCard {...PORTFOLIO.PROJECTS[1]} />
-            </div>
-            <div className="md:col-span-2 lg:col-span-1">
-              <ProjectCard {...PORTFOLIO.PROJECTS[2]} />
-            </div>
-            <div className="md:col-span-2 lg:col-span-2">
-              <ProjectCard {...PORTFOLIO.PROJECTS[3]} />
-            </div>
+          {/* Projects Grid - Single Row */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {PORTFOLIO.PROJECTS.map((project, idx) => (
+              <a
+                key={idx}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative aspect-square overflow-hidden rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300"
+              >
+                {/* Background Image */}
+                <img
+                  src={`${import.meta.env.BASE_URL}${project.image}`}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                  <p className="text-sm text-gray-200 line-clamp-2 mb-3">{project.description}</p>
+                  
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {project.tags.slice(0, 2).map((tag, tagIdx) => (
+                      <span
+                        key={tagIdx}
+                        className="text-xs px-2 py-1 bg-primary/30 text-primary rounded border border-primary/50"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center gap-1 text-primary group-hover:text-primary/80 transition-colors">
+                    <span className="text-sm font-semibold">Ver Projeto</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>

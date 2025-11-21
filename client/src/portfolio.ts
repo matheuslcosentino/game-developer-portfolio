@@ -67,17 +67,6 @@ export const PROJECTS = [
     trailerUrl: "https://www.youtube.com/watch?v=6jRYfJA9XGQ",
     status: "Concluído",
   },
-  {
-    title: "Visitors",
-    description:
-      "Jogo de horror independente focado em resolução de enigmas e mecânicas de sobrevivência em ambiente claustrofóbico.",
-    role: "Gameplay Programmer",
-    image: "/project4.png",
-    tags: ["Unity", "C#", "VR"],
-    link: "https://uf-team.itch.io/visitors",
-    trailerUrl: "",
-    status: "Concluído",
-  },
 ];
 
 // ============================================================================
