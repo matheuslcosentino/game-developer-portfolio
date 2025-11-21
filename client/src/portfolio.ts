@@ -197,8 +197,7 @@ export const NAV_ITEMS = [
 // ============================================================================
 
 export const FOOTER_TEXT = {
-  copyright: "© 2024 Matheus Lopes. Todos os direitos reservados.",
-  credits: "Desenvolvido com React, Tailwind CSS e muito ☕",
+  copyright: "© 2025 Matheus Lopes. Todos os direitos reservados.",
 };
 
 // ============================================================================

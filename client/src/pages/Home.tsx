@@ -600,9 +600,6 @@ export default function Home() {
           <p className="text-muted-foreground text-sm">
             {PORTFOLIO.FOOTER_TEXT.copyright}
           </p>
-          <p className="text-muted-foreground/60 text-xs mt-2">
-            {PORTFOLIO.FOOTER_TEXT.credits}
-          </p>
         </div>
       </footer>
 
