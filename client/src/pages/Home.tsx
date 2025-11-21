@@ -619,7 +619,7 @@ export default function Home() {
 
       {/* Floating Delirium Card */}
       <div
-        className="fixed bottom-6 right-6 z-50 group cursor-pointer"
+        className="hidden lg:block fixed bottom-6 right-6 z-50 group cursor-pointer"
         style={{
           animation: "float-up 3s ease-in-out infinite",
         }}
@@ -640,7 +640,7 @@ export default function Home() {
             {/* Card Content */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-1 mb-1">
-                <span className="text-xs font-bold text-primary bg-primary/10 px-2 py-1 rounded">Novo Lançamento!</span>
+                <span className="text-xs font-bold text-white bg-primary/10 px-2 py-1 rounded">Novo Lançamento!</span>
               </div>
               <h3 className="text-foreground font-bold text-lg leading-tight mb-1">
                 {PORTFOLIO.PROJECTS[0].title}
