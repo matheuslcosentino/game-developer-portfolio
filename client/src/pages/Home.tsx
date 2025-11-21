@@ -305,7 +305,7 @@ export default function Home() {
           `}</style>
         </div>
 
-        <div className="container max-w-4xl mx-auto relative z-10">
+        <div className="container max-w-4xl mx-auto relative z-10 pt-20 md:pt-0">
           {/* Text content - Centered */}
           <div className="space-y-8 text-center flex flex-col items-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
