@@ -56,21 +56,40 @@ export default function Home() {
         {/* Animated Gaming Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Animated Elements */}
-          {PORTFOLIO.DESIGN_CONFIG.heroAnimationElements.map((element, idx) => (
-            <div
-              key={idx}
-              className={`absolute text-primary/20 text-${element.size} opacity-30 animate-pulse`}
-              style={{
-                [element.position.split(" ")[0].split("-")[0]]: element.position.split(" ")[0].split("-")[1],
-                [element.position.split(" ")[1].split("-")[0]]: element.position.split(" ")[1].split("-")[1],
-                animation: `float 6s ease-in-out infinite`,
-                animationDelay: element.delay,
-                transform: `translateY(${scrollY * 0.3}px)`,
-              }}
-            >
-              {element.emoji}
-            </div>
-          ))}
+          {PORTFOLIO.DESIGN_CONFIG.heroAnimationElements.map((element, idx) => {
+            const sizeMap: { [key: string]: string } = {
+              "9xl": "128px",
+              "8xl": "120px",
+              "7xl": "96px",
+              "6xl": "80px",
+              "5xl": "64px",
+            };
+            return (
+              <div
+                key={idx}
+                style={{
+                  position: "absolute",
+                  ...(() => {
+                    const [pos1, pos2] = element.position.split(" ");
+                    const [dir1, val1] = pos1.split("-");
+                    const [dir2, val2] = pos2.split("-");
+                    const result: any = {};
+                    result[dir1] = `${val1 || 0}px`;
+                    result[dir2] = `${val2 || 0}px`;
+                    return result;
+                  })(),
+                  fontSize: sizeMap[element.size] || "96px",
+                  opacity: 0.3,
+                  animation: `float 6s ease-in-out infinite`,
+                  animationDelay: element.delay,
+                  transform: `translateY(${scrollY * 0.3}px)`,
+                  color: "rgba(6, 182, 212, 0.8)",
+                }}
+              >
+                {element.emoji}
+              </div>
+            );
+          })}
 
           {/* Glowing gradient orbs - Multiple layers */}
           <div
