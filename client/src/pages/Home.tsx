@@ -508,10 +508,10 @@ export default function Home() {
             {PORTFOLIO.PROJECTS.map((project, idx) => (
               <div
                 key={idx}
-                className="group relative aspect-square overflow-hidden rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 bg-card flex flex-col"
+                className="group relative overflow-hidden rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 bg-card flex flex-col"
               >
-                {/* Image Container - 65% */}
-                <div className="relative h-[65%] overflow-hidden bg-background/50 flex items-center justify-center">
+                {/* Image Container - Fixed height */}
+                <div className="relative h-64 overflow-hidden bg-background/50 flex items-center justify-center">
                   <img
                     src={project.image}
                     alt={project.title}
@@ -526,8 +526,8 @@ export default function Home() {
                   )}
                 </div>
 
-                {/* Content Container - 35% */}
-                <div className="flex-1 flex flex-col p-4 bg-card/50 backdrop-blur-sm overflow-auto">
+                {/* Content Container */}
+                <div className="flex flex-col p-4 bg-card/50 backdrop-blur-sm">
                   {/* Title and Description */}
                   <div className="mb-2">
                     <h3 className="text-base font-bold text-foreground mb-1">{project.title}</h3>
@@ -548,7 +548,7 @@ export default function Home() {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex gap-2 mt-auto">
+                  <div className="flex gap-2">
                     <a
                       href={project.link}
                       target="_blank"
