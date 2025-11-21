@@ -635,9 +635,6 @@ export default function Home() {
               <h3 className="text-foreground font-bold text-lg leading-tight mb-1">
                 {PORTFOLIO.PROJECTS[0].title}
               </h3>
-              <p className="text-muted-foreground text-xs line-clamp-2 mb-2">
-                {PORTFOLIO.PROJECTS[0].role}
-              </p>
               <p className="text-muted-foreground text-xs line-clamp-2">
                 {PORTFOLIO.PROJECTS[0].description}
               </p>
@@ -650,7 +647,7 @@ export default function Home() {
               href={PORTFOLIO.PROJECTS[0].link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/50 hover:border-primary/80 rounded-lg transition-all text-xs font-semibold"
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-primary/20 hover:bg-primary/30 text-foreground border border-primary/50 hover:border-primary/80 rounded-lg transition-all text-xs font-semibold"
             >
               <Download className="w-4 h-4" />
               Baixe Agora
@@ -659,7 +656,7 @@ export default function Home() {
               href={PORTFOLIO.PROJECTS[0].trailerUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary/60 rounded-lg transition-all text-xs font-semibold"
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-foreground border border-primary/30 hover:border-primary/60 rounded-lg transition-all text-xs font-semibold"
             >
               <Play className="w-4 h-4" />
               Ver Trailer
