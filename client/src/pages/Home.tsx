@@ -96,8 +96,74 @@ export default function Home() {
           background: "radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), linear-gradient(135deg, #000000 0%, #0a1929 100%)",
         }}
       >
-        {/* Floating shapes background */}
+        {/* Animated Gaming Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Animated Gamepad Icon */}
+          <div
+            className="absolute text-primary/15 text-9xl opacity-20"
+            style={{
+              top: "10%",
+              left: "5%",
+              animation: "float 6s ease-in-out infinite",
+              transform: `translateY(${scrollY * 0.3}px) rotate(-20deg)`,
+            }}
+          >
+            🎮
+          </div>
+
+          {/* Animated Controller Buttons */}
+          <div
+            className="absolute text-primary/12 text-7xl opacity-15"
+            style={{
+              top: "60%",
+              right: "10%",
+              animation: "float 8s ease-in-out infinite 1s",
+              transform: `translateY(${scrollY * -0.2}px) rotate(15deg)`,
+            }}
+          >
+            ◯ ✕ □ △
+          </div>
+
+          {/* Animated Joystick */}
+          <div
+            className="absolute text-primary/10 text-8xl opacity-15"
+            style={{
+              bottom: "15%",
+              left: "15%",
+              animation: "float 7s ease-in-out infinite 0.5s",
+              transform: `translateY(${scrollY * 0.1}px) scale(1)`,
+            }}
+          >
+            ↖
+          </div>
+
+          {/* Animated Dice/Cube */}
+          <div
+            className="absolute text-blue-500/10 text-6xl opacity-20"
+            style={{
+              bottom: "20%",
+              right: "5%",
+              animation: "float 9s ease-in-out infinite 1.5s",
+              transform: `translateY(${scrollY * -0.15}px) rotate(45deg)`,
+            }}
+          >
+            ⬜
+          </div>
+
+          {/* Animated Star */}
+          <div
+            className="absolute text-cyan-400/8 text-8xl opacity-20"
+            style={{
+              top: "30%",
+              right: "20%",
+              animation: "float 10s ease-in-out infinite 2s",
+              transform: `translateY(${scrollY * 0.2}px)`,
+            }}
+          >
+            ★
+          </div>
+
+          {/* Glowing gradient orbs */}
           <div
             className="absolute w-96 h-96 bg-primary/5 rounded-full blur-3xl"
             style={{
@@ -114,16 +180,23 @@ export default function Home() {
               transform: `translateY(${scrollY * -0.2}px)`,
             }}
           />
+
+          {/* CSS Animation Keyframes */}
+          <style>{`
+            @keyframes float {
+              0%, 100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-20px);
+              }
+            }
+          `}</style>
         </div>
 
         <div className="container max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left side - Text content */}
           <div className="space-y-8 lg:pr-12">
-            <div className="inline-block">
-              <span className="text-primary text-sm font-semibold tracking-wider uppercase border border-primary/30 px-4 py-2 rounded-full bg-primary/5 backdrop-blur-sm">
-                Game Developer Portfolio
-              </span>
-            </div>
             
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
               Olá, eu sou o{" "}
