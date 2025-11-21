@@ -46,14 +46,16 @@ export default function ProjectCard({
   };
 
   const handlePlayClick = () => {
-    if (!trailerUrl) return;
+    if (!trailerUrl || trailerUrl.trim() === '') return;
 
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const videoId = extractVideoId(trailerUrl);
 
-    if (isMobile && videoId) {
+    if (!videoId) return;
+
+    if (isMobile) {
       window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
-    } else if (videoId) {
+    } else {
       setIsTrailerOpen(true);
     }
   };
@@ -126,11 +128,13 @@ export default function ProjectCard({
         </div>
       </Card>
 
-      <TrailerModal 
-        isOpen={isTrailerOpen} 
-        trailerUrl={trailerUrl ? `https://www.youtube.com/embed/${extractVideoId(trailerUrl)}` : ""} 
-        onClose={() => setIsTrailerOpen(false)}
-      />
+      {trailerUrl && trailerUrl.trim() !== '' && (
+        <TrailerModal 
+          isOpen={isTrailerOpen} 
+          trailerUrl={`https://www.youtube.com/embed/${extractVideoId(trailerUrl)}`} 
+          onClose={() => setIsTrailerOpen(false)}
+        />
+      )}
     </>
   );
 }
