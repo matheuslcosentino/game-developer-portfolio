@@ -42,7 +42,7 @@ export const PROJECTS = [
     image: "/project1.png",
     tags: ["Unity", "C#", "Game Jam", "Psychological Horror"],
     link: "https://unholysaintstudios.itch.io/delirium",
-    trailerUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    trailerUrl: "https://www.youtube.com/embed/OXlCnt6Xueg",
     status: "Concluído",
   },
   {
@@ -53,7 +53,7 @@ export const PROJECTS = [
     image: "/project2.png",
     tags: ["Unity", "C#", "Horror", "Puzzle"],
     link: "https://uf-team.itch.io/horrorstoryfolks",
-    trailerUrl: "https://youtu.be/DKj8WZ_q7nY",
+    trailerUrl: "https://www.youtube.com/embed/DKj8WZ_q7nY",
     status: "Em Desenvolvimento",
   },
   {
@@ -64,7 +64,7 @@ export const PROJECTS = [
     image: "/project3.png",
     tags: ["Unity", "C#", "Game Jam", "Narrative Design"],
     link: "https://uf-team.itch.io/sombra-das-memorias",
-    trailerUrl: "https://www.youtube.com/watch?v=6jRYfJA9XGQ",
+    trailerUrl: "https://www.youtube.com/embed/6jRYfJA9XGQ",
     status: "Concluído",
   },
 ];
