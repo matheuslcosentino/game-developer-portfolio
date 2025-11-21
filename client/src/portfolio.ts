@@ -182,9 +182,14 @@ export const DESIGN_CONFIG = {
   heroAnimationElements: [
     { emoji: "🎮", position: "top-10 left-5", delay: "0s", size: "9xl" },
     { emoji: "◯ ✕ □ △", position: "top-60 right-10", delay: "1s", size: "7xl" },
-    { emoji: "↖", position: "bottom-15 left-15", delay: "0.5s", size: "8xl" },
-    { emoji: "⬜", position: "bottom-20 right-5", delay: "1.5s", size: "6xl" },
-    { emoji: "★", position: "top-30 right-20", delay: "2s", size: "8xl" },
+    { emoji: "↖", position: "bottom-32 left-16", delay: "0.5s", size: "8xl" },
+    { emoji: "⬜", position: "bottom-40 right-8", delay: "1.5s", size: "6xl" },
+    { emoji: "★", position: "top-32 right-32", delay: "2s", size: "8xl" },
+    { emoji: "🕹️", position: "top-96 left-1/4", delay: "0.3s", size: "7xl" },
+    { emoji: "🎯", position: "bottom-20 right-1/3", delay: "1.2s", size: "6xl" },
+    { emoji: "⚡", position: "top-40 left-1/3", delay: "1.8s", size: "5xl" },
+    { emoji: "◆", position: "bottom-56 left-1/2", delay: "0.8s", size: "7xl" },
+    { emoji: "🌟", position: "top-1/2 right-20", delay: "2.3s", size: "6xl" },
   ],
 };
 

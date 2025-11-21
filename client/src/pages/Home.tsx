@@ -50,15 +50,16 @@ export default function Home() {
         ref={homeRef}
         className="min-h-screen flex items-center relative px-4 overflow-hidden"
         style={{
-          background: "radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), linear-gradient(135deg, #000000 0%, #0a1929 100%)",
+          background: "radial-gradient(circle at 20% 50%, rgba(6, 182, 212, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%), linear-gradient(135deg, #000000 0%, #0a1929 100%)",
         }}
       >
         {/* Animated Gaming Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Animated Elements */}
           {PORTFOLIO.DESIGN_CONFIG.heroAnimationElements.map((element, idx) => (
             <div
               key={idx}
-              className={`absolute text-primary/15 text-${element.size} opacity-20`}
+              className={`absolute text-primary/20 text-${element.size} opacity-30 animate-pulse`}
               style={{
                 [element.position.split(" ")[0].split("-")[0]]: element.position.split(" ")[0].split("-")[1],
                 [element.position.split(" ")[1].split("-")[0]]: element.position.split(" ")[1].split("-")[1],
@@ -71,21 +72,47 @@ export default function Home() {
             </div>
           ))}
 
-          {/* Glowing gradient orbs */}
+          {/* Glowing gradient orbs - Multiple layers */}
           <div
-            className="absolute w-96 h-96 bg-primary/5 rounded-full blur-3xl"
+            className="absolute w-96 h-96 bg-primary/10 rounded-full blur-3xl"
             style={{
               top: "20%",
               left: "10%",
               transform: `translateY(${scrollY * 0.3}px)`,
+              animation: "pulse 4s ease-in-out infinite",
             }}
           />
           <div
-            className="absolute w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl"
+            className="absolute w-[500px] h-[500px] bg-blue-500/8 rounded-full blur-3xl"
             style={{
               bottom: "10%",
               right: "5%",
               transform: `translateY(${scrollY * -0.2}px)`,
+              animation: "pulse 5s ease-in-out infinite",
+              animationDelay: "1s",
+            }}
+          />
+          <div
+            className="absolute w-80 h-80 bg-cyan-500/5 rounded-full blur-2xl"
+            style={{
+              top: "50%",
+              right: "20%",
+              transform: `translateY(${scrollY * 0.2}px)`,
+              animation: "pulse 6s ease-in-out infinite",
+              animationDelay: "2s",
+            }}
+          />
+
+          {/* Animated grid lines */}
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: `
+                linear-gradient(0deg, transparent 24%, rgba(6, 182, 212, 0.05) 25%, rgba(6, 182, 212, 0.05) 26%, transparent 27%, transparent 74%, rgba(6, 182, 212, 0.05) 75%, rgba(6, 182, 212, 0.05) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(6, 182, 212, 0.05) 25%, rgba(6, 182, 212, 0.05) 26%, transparent 27%, transparent 74%, rgba(6, 182, 212, 0.05) 75%, rgba(6, 182, 212, 0.05) 76%, transparent 77%, transparent)
+              `,
+              backgroundSize: "50px 50px",
+              animation: "moveGrid 20s linear infinite",
             }}
           />
 
@@ -96,7 +123,25 @@ export default function Home() {
                 transform: translateY(0px);
               }
               50% {
-                transform: translateY(-20px);
+                transform: translateY(-30px);
+              }
+            }
+            
+            @keyframes pulse {
+              0%, 100% {
+                opacity: 0.3;
+              }
+              50% {
+                opacity: 0.6;
+              }
+            }
+            
+            @keyframes moveGrid {
+              0% {
+                transform: translateY(0);
+              }
+              100% {
+                transform: translateY(50px);
               }
             }
           `}</style>
