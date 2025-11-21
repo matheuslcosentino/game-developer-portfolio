@@ -55,38 +55,32 @@ export default function Home() {
       >
         {/* Animated Gaming Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Animated Elements */}
-          {PORTFOLIO.DESIGN_CONFIG.heroAnimationElements.map((element, idx) => {
-            const sizeMap: { [key: string]: string } = {
-              "9xl": "128px",
-              "8xl": "120px",
-              "7xl": "96px",
-              "6xl": "80px",
-              "5xl": "64px",
-            };
+          {/* Animated Elements - Many small scattered */}
+          {Array.from({ length: 30 }).map((_, idx) => {
+            const emojis = ["🎮", "🕹️", "🎯", "⚡", "🌟", "◆", "★", "◯", "✕", "□", "△", "⬜", "🎲", "🎪", "🔥", "💫", "✨", "🌠"];
+            const emoji = emojis[idx % emojis.length];
+            const top = Math.random() * 100;
+            const left = Math.random() * 100;
+            const size = Math.random() * 40 + 20; // 20-60px
+            const delay = Math.random() * 3;
+            const duration = Math.random() * 2 + 4; // 4-6s
+            
             return (
               <div
                 key={idx}
                 style={{
                   position: "absolute",
-                  ...(() => {
-                    const [pos1, pos2] = element.position.split(" ");
-                    const [dir1, val1] = pos1.split("-");
-                    const [dir2, val2] = pos2.split("-");
-                    const result: any = {};
-                    result[dir1] = `${val1 || 0}px`;
-                    result[dir2] = `${val2 || 0}px`;
-                    return result;
-                  })(),
-                  fontSize: sizeMap[element.size] || "96px",
-                  opacity: 0.3,
-                  animation: `float 6s ease-in-out infinite`,
-                  animationDelay: element.delay,
-                  transform: `translateY(${scrollY * 0.3}px)`,
-                  color: "rgba(6, 182, 212, 0.8)",
+                  top: `${top}%`,
+                  left: `${left}%`,
+                  fontSize: `${size}px`,
+                  opacity: Math.random() * 0.3 + 0.1,
+                  animation: `float ${duration}s ease-in-out infinite`,
+                  animationDelay: `${delay}s`,
+                  color: "rgba(6, 182, 212, 0.6)",
+                  userSelect: "none",
                 }}
               >
-                {element.emoji}
+                {emoji}
               </div>
             );
           })}
