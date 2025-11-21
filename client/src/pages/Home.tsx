@@ -24,6 +24,7 @@ export default function Home() {
   const homeRef = useRef<HTMLElement>(null);
   const [scrollY, setScrollY] = useState(0);
   const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
+  const [trailerUrl, setTrailerUrl] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -530,21 +531,19 @@ export default function Home() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-primary/20 hover:bg-primary/30 text-primary border border-primary/50 hover:border-primary/80 rounded-lg text-xs font-semibold transition-all"
+                      className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-primary/20 hover:bg-primary/30 text-foreground border border-primary/50 hover:border-primary/80 rounded-lg text-xs font-semibold transition-all"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       Acessar
                     </a>
                     {project.trailerUrl && (
-                      <a
-                        href={project.trailerUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 hover:border-primary/60 rounded-lg text-xs font-semibold transition-all"
+                      <button
+                        onClick={() => setTrailerUrl(project.trailerUrl)}
+                        className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-foreground border border-primary/30 hover:border-primary/60 rounded-lg text-xs font-semibold transition-all"
                       >
                         <Play className="w-3.5 h-3.5" />
                         Trailer
-                      </a>
+                      </button>
                     )}
                   </div>
                 </div>
@@ -664,6 +663,35 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Trailer Modal */}
+      {trailerUrl && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+          onClick={() => setTrailerUrl(null)}
+        >
+          <div
+            className="relative w-full max-w-4xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setTrailerUrl(null)}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <iframe
+              src={trailerUrl}
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
