@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Gamepad2, Code, Layers } from "lucide-react";
+import { ChevronDown, Gamepad2, Code, Layers, Github, Linkedin, Mail, MessageCircle, Instagram } from "lucide-react";
 import Header from "@/components/Header";
 import ProjectCard from "@/components/ProjectCard";
 import * as PORTFOLIO from "@/portfolio";
@@ -8,11 +8,11 @@ import * as PORTFOLIO from "@/portfolio";
 // Icon mapping
 const getIcon = (iconName: string) => {
   const iconMap: { [key: string]: any } = {
-    Github: (() => { const { Github } = require("lucide-react"); return Github; })(),
-    Linkedin: (() => { const { Linkedin } = require("lucide-react"); return Linkedin; })(),
-    Mail: (() => { const { Mail } = require("lucide-react"); return Mail; })(),
-    MessageCircle: (() => { const { MessageCircle } = require("lucide-react"); return MessageCircle; })(),
-    Instagram: (() => { const { Instagram } = require("lucide-react"); return Instagram; })(),
+    Github,
+    Linkedin,
+    Mail,
+    MessageCircle,
+    Instagram,
   };
   return iconMap[iconName] || null;
 };
