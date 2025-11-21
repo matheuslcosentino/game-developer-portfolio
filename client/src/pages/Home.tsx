@@ -515,7 +515,7 @@ export default function Home() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   {project.status && (
                     <div className="absolute top-3 right-3">
