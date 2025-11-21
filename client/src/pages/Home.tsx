@@ -527,16 +527,16 @@ export default function Home() {
                 </div>
 
                 {/* Content Container - 35% */}
-                <div className="flex-1 flex flex-col justify-between p-4 bg-card/50 backdrop-blur-sm">
+                <div className="flex-1 flex flex-col p-4 bg-card/50 backdrop-blur-sm overflow-auto">
                   {/* Title and Description */}
-                  <div className="mb-3">
-                    <h3 className="text-lg font-bold text-foreground mb-1 line-clamp-1">{project.title}</h3>
-                    <p className="text-xs text-muted-foreground line-clamp-2 mb-2">{project.description}</p>
+                  <div className="mb-2">
+                    <h3 className="text-base font-bold text-foreground mb-1">{project.title}</h3>
+                    <p className="text-xs text-muted-foreground mb-1">{project.description}</p>
                     <p className="text-xs text-primary font-semibold">Função: {project.role}</p>
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-3">
+                  <div className="flex flex-wrap gap-1.5 mb-2">
                     {project.tags.slice(0, 4).map((tag, tagIdx) => (
                       <span
                         key={tagIdx}
@@ -548,7 +548,7 @@ export default function Home() {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex gap-2">
+                  <div className="flex gap-2 mt-auto">
                     <a
                       href={project.link}
                       target="_blank"
