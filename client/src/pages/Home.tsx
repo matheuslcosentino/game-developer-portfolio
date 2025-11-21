@@ -653,7 +653,7 @@ export default function Home() {
               Baixe Agora
             </a>
             <a
-              href={PORTFOLIO.PROJECTS[0].trailerUrl}
+              href="https://www.youtube.com/watch?v=OXlCnt6Xueg"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-primary/10 hover:bg-primary/20 text-foreground border border-primary/30 hover:border-primary/60 rounded-lg transition-all text-xs font-semibold"
