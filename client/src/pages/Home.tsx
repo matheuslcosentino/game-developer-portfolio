@@ -304,9 +304,9 @@ export default function Home() {
           `}</style>
         </div>
 
-        <div className="container max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-          {/* Left side - Text content */}
-          <div className="space-y-8 lg:pr-12 text-center flex flex-col items-center">
+        <div className="container max-w-4xl mx-auto relative z-10">
+          {/* Text content - Centered */}
+          <div className="space-y-8 text-center flex flex-col items-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
               Olá, eu sou o{" "}
               <span className="bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent animate-pulse">
@@ -349,32 +349,6 @@ export default function Home() {
               >
                 Sobre Mim
               </Button>
-            </div>
-          </div>
-
-          {/* Right side - Decorative element */}
-          <div className="hidden lg:block relative">
-            <div className="relative w-full h-[600px]">
-              {/* Glassmorphism card */}
-              <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-3xl backdrop-blur-xl border border-white/10 p-8 transform rotate-6 hover:rotate-3 transition-transform duration-500">
-                <div className="space-y-4">
-                  <div className="w-16 h-16 bg-primary/30 rounded-2xl flex items-center justify-center">
-                    <Gamepad2 className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold">4+ Anos</h3>
-                  <p className="text-muted-foreground">Experiência em desenvolvimento de jogos</p>
-                </div>
-              </div>
-
-              <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-500/20 to-primary/20 rounded-3xl backdrop-blur-xl border border-white/10 p-8 transform -rotate-6 hover:-rotate-3 transition-transform duration-500">
-                <div className="space-y-4">
-                  <div className="w-16 h-16 bg-primary/30 rounded-2xl flex items-center justify-center">
-                    <Code className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold">4 Projetos</h3>
-                  <p className="text-muted-foreground">Game Jams vencidas e jogos publicados</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
