@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Gamepad2, Code, Layers, Github, Linkedin, Mail, MessageCircle, Instagram } from "lucide-react";
+import { ChevronDown, Gamepad2, Code, Layers, Github, Linkedin, Mail, MessageCircle, Instagram, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import ProjectCard from "@/components/ProjectCard";
 import * as PORTFOLIO from "@/portfolio";
@@ -23,11 +23,39 @@ export default function Home() {
   const contactRef = useRef<HTMLElement>(null);
   const homeRef = useRef<HTMLElement>(null);
   const [scrollY, setScrollY] = useState(0);
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Intersection Observer para animação ao scrollar
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleElements((prev) => new Set(prev).add(entry.target.id));
+            // Aplicar animações aos filhos
+            const children = entry.target.querySelectorAll("div, h2, h3, p, span");
+            children.forEach((child, idx) => {
+              (child as HTMLElement).style.animation = `slideInUp 0.6s ease-out forwards`;
+              (child as HTMLElement).style.animationDelay = `${idx * 0.1}s`;
+            });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll("[data-animate]");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => observer.unobserve(el));
+    };
   }, []);
 
   const scrollToSection = (section: string) => {
@@ -211,6 +239,73 @@ export default function Home() {
                 stroke-dashoffset: 500;
               }
             }
+
+            @keyframes slideInUp {
+              from {
+                opacity: 0;
+                transform: translateY(30px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+
+            @keyframes slideInLeft {
+              from {
+                opacity: 0;
+                transform: translateX(-30px);
+              }
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            @keyframes slideInRight {
+              from {
+                opacity: 0;
+                transform: translateX(30px);
+              }
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+
+            @keyframes float-up {
+              0%, 100% {
+                transform: translateY(0px);
+              }
+              50% {
+                transform: translateY(-10px);
+              }
+            }
+
+            .animate-scroll-in {
+              animation: slideInUp 0.6s ease-out forwards;
+            }
+
+            .animate-scroll-in-left {
+              animation: slideInLeft 0.6s ease-out forwards;
+            }
+
+            .animate-scroll-in-right {
+              animation: slideInRight 0.6s ease-out forwards;
+            }
+
+            .animate-scroll-fade {
+              animation: fadeIn 0.6s ease-out forwards;
+            }
           `}</style>
         </div>
 
@@ -301,6 +396,8 @@ export default function Home() {
       {/* About Section */}
       <section
         ref={aboutRef}
+        id="about-section"
+        data-animate="true"
         className="min-h-screen flex items-center py-32 px-4 bg-background relative"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
@@ -392,6 +489,8 @@ export default function Home() {
       {/* Projects Section */}
       <section
         ref={projectsRef}
+        id="projects-section"
+        data-animate="true"
         className="min-h-screen flex items-center py-32 px-4 relative overflow-hidden"
         style={{
           background: "radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%), linear-gradient(180deg, #000000 0%, #0a1929 100%)",
@@ -430,6 +529,8 @@ export default function Home() {
       {/* Contact Section */}
       <section
         ref={contactRef}
+        id="contact-section"
+        data-animate="true"
         className="flex items-center py-16 px-4 bg-background relative"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none" />
@@ -477,6 +578,49 @@ export default function Home() {
           </p>
         </div>
       </footer>
+
+      {/* Floating Delirium Card */}
+      <div
+        className="fixed bottom-6 right-6 z-50 group cursor-pointer"
+        style={{
+          animation: "float-up 3s ease-in-out infinite",
+        }}
+      >
+        <a
+          href="https://www.youtube.com/@delirium_yt"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block"
+        >
+          <div className="bg-gradient-to-br from-orange-600 to-red-700 rounded-2xl p-4 w-72 shadow-2xl border border-orange-400/50 hover:shadow-orange-500/50 hover:border-orange-300 transition-all duration-300 hover:scale-105">
+            <div className="flex gap-4">
+              {/* Card Image */}
+              <div className="flex-shrink-0">
+                <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-yellow-600 to-orange-900 flex items-center justify-center border-2 border-orange-300/50 overflow-hidden">
+                  <div className="text-3xl">🎮</div>
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-1 mb-1">
+                  <span className="text-xs font-bold text-orange-200 bg-orange-900/50 px-2 py-1 rounded">Novo</span>
+                </div>
+                <h3 className="text-white font-bold text-sm leading-tight mb-1">
+                  Echoes: Capítulo 1
+                </h3>
+                <p className="text-orange-100 text-xs line-clamp-2 mb-3">
+                  Horror psicológico explorando imersão e narrativa.
+                </p>
+                <div className="flex items-center gap-1 text-orange-200 hover:text-white transition-colors">
+                  <span className="text-xs font-semibold">Jogar Agora</span>
+                  <ExternalLink className="w-3 h-3" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   );
 }
