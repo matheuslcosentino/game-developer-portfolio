@@ -308,14 +308,14 @@ export default function Home() {
         <div className="container max-w-4xl mx-auto relative z-10 pt-20 md:pt-0">
           {/* Text content - Centered */}
           <div className="space-y-8 text-center flex flex-col items-center">
-            <h1 className="hidden md:block text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold leading-tight">
               Olá, eu sou o{" "}
               <span className="bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent animate-pulse">
                 {PORTFOLIO.PERSONAL_INFO.name}
               </span>
             </h1>
 
-            <div className="hidden md:flex flex-wrap gap-4 text-lg text-muted-foreground justify-center">
+            <div className="flex flex-wrap gap-4 text-lg text-muted-foreground justify-center max-w-md">
               <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-border/50">
                 <Gamepad2 className="w-5 h-5 text-primary" />
                 <span>Game Developer</span>
