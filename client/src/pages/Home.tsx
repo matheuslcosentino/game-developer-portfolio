@@ -529,14 +529,17 @@ export default function Home() {
                 {/* Content Container */}
                 <div className="flex flex-col p-4 bg-card/50 backdrop-blur-sm">
                   {/* Title and Description */}
-                  <div className="mb-2">
+                  <div className="mb-6">
                     <h3 className="text-base font-bold text-foreground mb-1">{project.title}</h3>
-                    <p className="text-xs text-muted-foreground mb-1">{project.description}</p>
-                    <p className="text-xs text-primary font-semibold">Função: {project.role}</p>
+                    <p className="text-xs text-muted-foreground mb-6">{project.description}</p>
+                    <p className="text-xs">
+                      <span className="text-primary font-bold">Função:</span>
+                    </p>
+                    <p className="text-xs text-foreground">{project.role}</p>
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-2">
+                  <div className="flex flex-wrap gap-1.5 mb-6">
                     {project.tags.slice(0, 4).map((tag, tagIdx) => (
                       <span
                         key={tagIdx}
