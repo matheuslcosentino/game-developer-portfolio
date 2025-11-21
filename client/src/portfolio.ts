@@ -24,7 +24,7 @@ export const PERSONAL_INFO = {
   fullName: "Matheus Lopes",
   title: "Game Developer",
   subtitle:
-    "Desenvolvendo experiências interativas que combinam complexidade técnica e gameplay envolvente, com paixão por jogos de terror e narrativas imersivas.",
+    "Bacharel em Game Design, desenvolvendo experiências interativas que combinam complexidade técnica e gameplay envolvente, com paixão por jogos de terror e narrativas imersivas.",
   email: "matheuslopescosentino@hotmail.com",
   whatsapp: "5547992230328",
 };
