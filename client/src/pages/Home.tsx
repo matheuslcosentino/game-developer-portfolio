@@ -306,7 +306,7 @@ export default function Home() {
 
         <div className="container max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left side - Text content */}
-          <div className="space-y-8 lg:pr-12 text-center lg:text-left flex flex-col items-center lg:items-start">
+          <div className="space-y-8 lg:pr-12 text-center flex flex-col items-center">
             <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
               Olá, eu sou o{" "}
               <span className="bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent animate-pulse">
@@ -314,7 +314,7 @@ export default function Home() {
               </span>
             </h1>
 
-            <div className="flex flex-wrap gap-4 text-lg text-muted-foreground justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-4 text-lg text-muted-foreground justify-center">
               <div className="flex items-center gap-2 bg-card/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-border/50">
                 <Gamepad2 className="w-5 h-5 text-primary" />
                 <span>Game Developer</span>
@@ -333,7 +333,7 @@ export default function Home() {
               {PORTFOLIO.PERSONAL_INFO.subtitle}
             </p>
 
-            <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-4 pt-4 justify-center">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all"
